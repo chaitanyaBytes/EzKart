@@ -4,6 +4,9 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+
 const font = Urbanist({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -24,10 +27,12 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          font.className
+          font.variable
         )}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
