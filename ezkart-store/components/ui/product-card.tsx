@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           src={data?.images?.[0]?.url}
           alt="image"
           fill
-          className="aspect-square rounded-md"
+          className="aspect-square rounded-xl"
         />
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
