@@ -21,7 +21,7 @@ const Summary = () => {
     }
 
     if (searchParams.get("cancelled")) {
-      toast.success("Something went wrong");
+      toast.error("Something went wrong");
     }
   }, [searchParams, removeAll]);
 
