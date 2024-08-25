@@ -50,6 +50,7 @@ const Summary = () => {
         </div>
       </div>
       <Button
+        disabled={items.length == 0}
         onClick={onCheckout}
         className="w-full mt-6 text-lg bg-black text-white rounded-full hover:opacity-75 hover:bg-black"
       >

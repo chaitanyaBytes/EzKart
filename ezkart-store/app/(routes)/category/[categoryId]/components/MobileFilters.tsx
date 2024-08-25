@@ -1,12 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
-import qs from "query-string";
 
 import { Color, Size } from "@/types";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { PlusIcon, X } from "lucide-react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import IconButton from "@/components/ui/icon-button";
@@ -18,9 +15,6 @@ interface MobileFiltersProps {
 }
 
 const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
   const [open, setOpen] = useState(false);
 
   const onOpen = () => setOpen(true);
@@ -30,7 +24,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
     <>
       <Button
         onClick={onOpen}
-        className="flex items-center gap-x-2 bg-black text-white rounded-full lg:hidden"
+        className="flex items-center gap-x-2 bg-black text-white rounded-full hover:bg-black hover:opacity-80 lg:hidden"
       >
         Filters
         <PlusIcon size={20} />
@@ -50,7 +44,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
           >
             {/* close button */}
             <div className="flex items-center justify-end px-4">
-              <IconButton icon={<X size={15} />} onClick={onClose} />
+              <IconButton icon={<X size={20} />} onClick={onClose} />
             </div>
 
             <div className="p-4">
