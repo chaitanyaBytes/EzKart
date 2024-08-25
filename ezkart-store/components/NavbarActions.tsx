@@ -35,7 +35,9 @@ const NavbarActions = () => {
       <Button
         className="flex items-cente rounded-3xl px-4 py-1 hover:opacity-80 bg-gray-200 hover:bg-gray-100"
         variant={"secondary"}
-        onClick={() => (window.location.href = "http://localhost:3000/")}
+        onClick={() =>
+          (window.location.href = "https://ez-kart-admin.vercel.app")
+        }
       >
         <UserPen size={20} />
         <span className="ml-2 font-semibold text-md">Admin?</span>
