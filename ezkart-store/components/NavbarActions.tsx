@@ -27,20 +27,10 @@ const NavbarActions = () => {
         onClick={() => router.push("/cart")}
         className="flex items-center bg-black rounded-3xl px-4 py-1 hover:opacity-80 hover:bg-black"
       >
-        <ShoppingBag size={20} color="white" />
-        <span className="ml-2 text-white font-medium text-lg">
+        <ShoppingBag size={15} color="white" />
+        <span className="ml-2 text-white font-medium text-md">
           {cart.items.length}
         </span>
-      </Button>
-      <Button
-        className="flex items-cente rounded-3xl px-4 py-1 hover:opacity-80 bg-gray-200 hover:bg-gray-100"
-        variant={"secondary"}
-        onClick={() =>
-          (window.location.href = "https://ez-kart-admin.vercel.app")
-        }
-      >
-        <UserPen size={20} />
-        <span className="ml-2 font-semibold text-md">Admin?</span>
       </Button>
     </div>
   );
